@@ -42,5 +42,4 @@ def solution(points, routes):
                     answer += 1
                     checked.add(pos)
                     
-    
     return answer
