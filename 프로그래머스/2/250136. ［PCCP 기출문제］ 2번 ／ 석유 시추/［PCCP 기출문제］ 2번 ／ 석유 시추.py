@@ -42,33 +42,3 @@ def solution(land):
     
     # 3. 모든 열 중 가장 많은 석유량 반환
     return max(result)
-
-# def solution(land):
-#     lenx = len(land[0])
-#     leny = len(land)
-#     ans = [0]*lenx
-#     visited = [[False]*lenx for _ in range(leny)]
-    
-#     for i in range(lenx):
-#         for j in range(leny):
-#             if land[i][j] == 1 and visited[i][j] != False:
-#                 q = deque([i, j])
-#                 visited[i][j] = True
-#                 cnt = 0
-#                 xs = set()
-                
-#                 while q:
-#                     x, y = q.popleft()
-#                     cnt += 1
-#                     xs.add(x)
-#                     for dx, dy in [(0, 1), (0, -1), (1, 0), (-1, 0)]:
-#                         cx, cy = x+dx, y+dy
-                        
-#                         if 0<=cx<lenx and 0<=cy<leny:
-#                             if land[cx][cy] == 1 and not visited[cx][cy]:
-#                                 visited[cx][cy] = True
-#                                 q.append((cx, cy))
-#                 for col in xs:
-#                     ans[col] += cnt
-    
-#     return max(ans)
